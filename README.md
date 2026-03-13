@@ -1,17 +1,71 @@
-# smart_checkin_app
+# Smart Class Check-in App
 
-A new Flutter project.
+## Project Description
 
-## Getting Started
+Smart Class Check-in App is a Flutter application for classroom attendance and learning reflection.
+Students can check in before class and finish class after session completion.
 
-This project is a starting point for a Flutter application.
+Main features:
+- GPS location capture
+- QR code scan verification
+- Before-class check-in form (previous topic, expected topic, mood)
+- After-class reflection form (what learned today, feedback)
+- Local data storage for prototype usage
 
-A few resources to get you started if this is your first Flutter project:
+## Setup Instructions
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Prerequisites:
+- Flutter SDK (stable)
+- Dart SDK (comes with Flutter)
+- Firebase CLI (for web hosting deployment)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Install dependencies:
+
+```bash
+flutter pub get
+```
+
+Optional checks:
+
+```bash
+flutter doctor
+flutter analyze
+```
+
+## How to run the app
+
+Run on local device/emulator:
+
+```bash
+flutter pub get
+flutter run
+```
+
+Run on web:
+
+```bash
+flutter run -d chrome
+```
+
+Build web release:
+
+```bash
+flutter build web
+```
+
+## Firebase configuration notes
+
+This project deploys the web version using Firebase Hosting.
+
+Typical deployment flow:
+
+```bash
+flutter build web
+firebase login
+firebase init hosting
+firebase deploy
+```
+
+Notes:
+- `firebase.json` in this repo contains hosting configuration.
+- Deploy command publishes `build/web` to Firebase Hosting.
