@@ -69,3 +69,7 @@ firebase deploy
 Notes:
 - `firebase.json` in this repo contains hosting configuration.
 - Deploy command publishes `build/web` to Firebase Hosting.
+
+## Live Demo
+
+https://your-project.web.app
